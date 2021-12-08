@@ -102,6 +102,7 @@ $app->register(Tymon\JWTAuth\Providers\LumenServiceProvider::class);
 $app->register(Chuckrincon\LumenConfigDiscover\DiscoverServiceProvider::class);
 class_alias('Tymon\JWTAuth\Facades\JWTAuth', 'JWTAuth');
 class_alias('Tymon\JWTAuth\Facades\JWTFactory', 'JWTFactory');
+$app->register(\MigrationsGenerator\MigrationsGeneratorServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------

@@ -1,0 +1,2469 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Lumen Simpade",
+		"_postman_id": "79e1b7d0-4a6c-ab9b-e8d4-be92e58c509a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"description": "",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"url": "http://127.0.0.1:8000/auth/register",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "asasas",
+								"value": "asasasa",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nama_wp",
+									"value": "ardi",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ardi@gmail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "wp_id",
+									"value": "wpwpwppwwp",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "kategori_wp_id",
+									"value": "1",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "npwpd",
+									"value": "npwpd",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "alamat_wp",
+									"value": "sumbawa",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "kode_pemda_tk2",
+									"value": "wlwl",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "kode_desa_lurah",
+									"value": "kode_desa_lurah",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "kode_pos",
+									"value": "kode_pos",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "tanggal_aktif_wp",
+									"value": "2021-02-02",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "wp",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"url": "http://localhost:8000/auth/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9yZWdpc3RlciIsImlhdCI6MTYzNTkxNTk3OCwiZXhwIjoxNjM1OTE5NTc4LCJuYmYiOjE2MzU5MTU5NzgsImp0aSI6IjNOc2VBSk0xbXlkeHVvZVEiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ITKtvvJwRXaDfOIouF8nGufPdehL8ypO-kSMou6SYeI",
+								"description": "",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "ardi@gmail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Me",
+					"request": {
+						"url": "http://localhost:8000/auth/me",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUyOTAwNiwiZXhwIjoxNjM2NTMyNjA2LCJuYmYiOjE2MzY1MjkwMDYsImp0aSI6InFnd3V6WnE1dGp5UWE0eTAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UflGCYI6UAridooRnwImBjEBg8-ESryQcvs4HRL29JU",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"url": "http://localhost:8000/auth/logout",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzNTkyMDE0OCwiZXhwIjoxNjM1OTIzNzQ4LCJuYmYiOjE2MzU5MjAxNDgsImp0aSI6IktQM0J2U1BMSGl5OTRHOWUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.lH8Mcc7UolKqhMl5D3b4RZpXVfLbFl4vvtjQnVXTkdo",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "WP",
+			"description": "",
+			"item": [
+				{
+					"name": "wp",
+					"description": "",
+					"item": [
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/wp/wp",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUzMjgyNSwiZXhwIjoxNjM2NTM2NDI1LCJuYmYiOjE2MzY1MzI4MjUsImp0aSI6IjhFQ0g1TkJzVVJWYU9TRVYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sBi6Qkiti-Zv9591v4ihUzQDyUpIdEKQeerZPmZgb6I",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/count",
+							"request": {
+								"url": "http://localhost:8000/wp/wp/count",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUzMjgyNSwiZXhwIjoxNjM2NTM2NDI1LCJuYmYiOjE2MzY1MzI4MjUsImp0aSI6IjhFQ0g1TkJzVVJWYU9TRVYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sBi6Qkiti-Zv9591v4ihUzQDyUpIdEKQeerZPmZgb6I",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/countByDaerah",
+							"request": {
+								"url": "http://localhost:8000/wp/wp/countByDaerah",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUzMjgyNSwiZXhwIjoxNjM2NTM2NDI1LCJuYmYiOjE2MzY1MzI4MjUsImp0aSI6IjhFQ0g1TkJzVVJWYU9TRVYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sBi6Qkiti-Zv9591v4ihUzQDyUpIdEKQeerZPmZgb6I",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/getAllWpOutlet",
+							"request": {
+								"url": "http://localhost:8000/wp/wp/getAllWpOutlet",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUzMjgyNSwiZXhwIjoxNjM2NTM2NDI1LCJuYmYiOjE2MzY1MzI4MjUsImp0aSI6IjhFQ0g1TkJzVVJWYU9TRVYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sBi6Qkiti-Zv9591v4ihUzQDyUpIdEKQeerZPmZgb6I",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/wp/wp",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUzMjgyNSwiZXhwIjoxNjM2NTM2NDI1LCJuYmYiOjE2MzY1MzI4MjUsImp0aSI6IjhFQ0g1TkJzVVJWYU9TRVYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sBi6Qkiti-Zv9591v4ihUzQDyUpIdEKQeerZPmZgb6I",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "wp_id",
+											"value": "2",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "kategori_wp_id",
+											"value": "3",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "nama_wp",
+											"value": "Siapa lagi?",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "siapalagi@gmail.com",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "npwpd",
+											"value": "npwpd",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "alamat_wp",
+											"value": "Sumbawa",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "kode_pemda_tk2",
+											"value": "kode_pemda",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "kode_desa_lurah",
+											"value": "kode_desa_lurah",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "kode_pos",
+											"value": "121212",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "tanggal_aktif_wp",
+											"value": "2021-11-30",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/wp/wp/1",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUzMjgyNSwiZXhwIjoxNjM2NTM2NDI1LCJuYmYiOjE2MzY1MzI4MjUsImp0aSI6IjhFQ0g1TkJzVVJWYU9TRVYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sBi6Qkiti-Zv9591v4ihUzQDyUpIdEKQeerZPmZgb6I",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/getWpByKategori/{id}",
+							"request": {
+								"url": "http://localhost:8000/wp/wp/getWpByKategori/1",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUzMjgyNSwiZXhwIjoxNjM2NTM2NDI1LCJuYmYiOjE2MzY1MzI4MjUsImp0aSI6IjhFQ0g1TkJzVVJWYU9TRVYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sBi6Qkiti-Zv9591v4ihUzQDyUpIdEKQeerZPmZgb6I",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/getWpByOutlet/{id}",
+							"request": {
+								"url": "http://localhost:8000/wp/wp/getWpByOutlet/2",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUzMjgyNSwiZXhwIjoxNjM2NTM2NDI1LCJuYmYiOjE2MzY1MzI4MjUsImp0aSI6IjhFQ0g1TkJzVVJWYU9TRVYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sBi6Qkiti-Zv9591v4ihUzQDyUpIdEKQeerZPmZgb6I",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/getWpByAfe/{id}",
+							"request": {
+								"url": "http://localhost:8000/wp/wp/getWpByAfe/2",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUzMjgyNSwiZXhwIjoxNjM2NTM2NDI1LCJuYmYiOjE2MzY1MzI4MjUsImp0aSI6IjhFQ0g1TkJzVVJWYU9TRVYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sBi6Qkiti-Zv9591v4ihUzQDyUpIdEKQeerZPmZgb6I",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/getWpByKodePemda/{id}",
+							"request": {
+								"url": "http://localhost:8000/wp/wp/getWpByKodePemda/2",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUzMjgyNSwiZXhwIjoxNjM2NTM2NDI1LCJuYmYiOjE2MzY1MzI4MjUsImp0aSI6IjhFQ0g1TkJzVVJWYU9TRVYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sBi6Qkiti-Zv9591v4ihUzQDyUpIdEKQeerZPmZgb6I",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/countWpByDaerahId/{id}",
+							"request": {
+								"url": "http://localhost:8000/wp/wp/countWpByDaerahId/2",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUzMjgyNSwiZXhwIjoxNjM2NTM2NDI1LCJuYmYiOjE2MzY1MzI4MjUsImp0aSI6IjhFQ0g1TkJzVVJWYU9TRVYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sBi6Qkiti-Zv9591v4ihUzQDyUpIdEKQeerZPmZgb6I",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/getWpOutletByIdWp/{id}",
+							"request": {
+								"url": "http://localhost:8000/wp/wp/getWpOutletByIdWp/2",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUzMjgyNSwiZXhwIjoxNjM2NTM2NDI1LCJuYmYiOjE2MzY1MzI4MjUsImp0aSI6IjhFQ0g1TkJzVVJWYU9TRVYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sBi6Qkiti-Zv9591v4ihUzQDyUpIdEKQeerZPmZgb6I",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/getWpOutletByKategori/{id}",
+							"request": {
+								"url": "http://localhost:8000/wp/wp/getWpOutletByKategori/2",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUzMjgyNSwiZXhwIjoxNjM2NTM2NDI1LCJuYmYiOjE2MzY1MzI4MjUsImp0aSI6IjhFQ0g1TkJzVVJWYU9TRVYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sBi6Qkiti-Zv9591v4ihUzQDyUpIdEKQeerZPmZgb6I",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/getWpOutletByAfe/{id}",
+							"request": {
+								"url": "http://localhost:8000/wp/wp/getWpOutletByAfe/2",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUzMjgyNSwiZXhwIjoxNjM2NTM2NDI1LCJuYmYiOjE2MzY1MzI4MjUsImp0aSI6IjhFQ0g1TkJzVVJWYU9TRVYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sBi6Qkiti-Zv9591v4ihUzQDyUpIdEKQeerZPmZgb6I",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/getWpOutletByKodePemda/{id}",
+							"request": {
+								"url": "http://localhost:8000/wp/wp/getWpOutletByKodePemda/2",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUzMjgyNSwiZXhwIjoxNjM2NTM2NDI1LCJuYmYiOjE2MzY1MzI4MjUsImp0aSI6IjhFQ0g1TkJzVVJWYU9TRVYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sBi6Qkiti-Zv9591v4ihUzQDyUpIdEKQeerZPmZgb6I",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/wp/wp/2",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUzMjgyNSwiZXhwIjoxNjM2NTM2NDI1LCJuYmYiOjE2MzY1MzI4MjUsImp0aSI6IjhFQ0g1TkJzVVJWYU9TRVYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sBi6Qkiti-Zv9591v4ihUzQDyUpIdEKQeerZPmZgb6I",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "apa@gmail.com",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}/delete",
+							"request": {
+								"url": "http://localhost:8000/wp/wp/1/delete",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUzMjgyNSwiZXhwIjoxNjM2NTM2NDI1LCJuYmYiOjE2MzY1MzI4MjUsImp0aSI6IjhFQ0g1TkJzVVJWYU9TRVYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sBi6Qkiti-Zv9591v4ihUzQDyUpIdEKQeerZPmZgb6I",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "kategori",
+					"description": "",
+					"item": [
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/wp/kategori",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUyOTAwNiwiZXhwIjoxNjM2NTMyNjA2LCJuYmYiOjE2MzY1MjkwMDYsImp0aSI6InFnd3V6WnE1dGp5UWE0eTAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UflGCYI6UAridooRnwImBjEBg8-ESryQcvs4HRL29JU",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/wp/kategori",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUzMjgyNSwiZXhwIjoxNjM2NTM2NDI1LCJuYmYiOjE2MzY1MzI4MjUsImp0aSI6IjhFQ0g1TkJzVVJWYU9TRVYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sBi6Qkiti-Zv9591v4ihUzQDyUpIdEKQeerZPmZgb6I",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/wp/kategori/2",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUzMjgyNSwiZXhwIjoxNjM2NTM2NDI1LCJuYmYiOjE2MzY1MzI4MjUsImp0aSI6IjhFQ0g1TkJzVVJWYU9TRVYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sBi6Qkiti-Zv9591v4ihUzQDyUpIdEKQeerZPmZgb6I",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/wp/kategori/2",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUzMjgyNSwiZXhwIjoxNjM2NTM2NDI1LCJuYmYiOjE2MzY1MzI4MjUsImp0aSI6IjhFQ0g1TkJzVVJWYU9TRVYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sBi6Qkiti-Zv9591v4ihUzQDyUpIdEKQeerZPmZgb6I",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}/delete",
+							"request": {
+								"url": "http://localhost:8000/wp/kategori/2/delete",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUzMjgyNSwiZXhwIjoxNjM2NTM2NDI1LCJuYmYiOjE2MzY1MzI4MjUsImp0aSI6IjhFQ0g1TkJzVVJWYU9TRVYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sBi6Qkiti-Zv9591v4ihUzQDyUpIdEKQeerZPmZgb6I",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "AFE",
+			"description": "",
+			"item": [
+				{
+					"name": "AFEMain",
+					"description": "",
+					"item": [
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/afe/AFEmain",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/afe/AFEmain",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "afe_id",
+											"value": "01299",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "kategori_afe_id",
+											"value": "2",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "status_id",
+											"value": "2",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "afe_status_id",
+											"value": "2",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "tanggal_install",
+											"value": "2021-12-12",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "tanggal_aktif",
+											"value": "2021-12-12",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "wp_view",
+											"value": "Y",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "serial_number",
+											"value": "72348723842",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "tanggal_produksi",
+											"value": "2021-12-12",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "tanggal_deliver",
+											"value": "2021-12-12",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "produk_afe_id",
+											"value": "2",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/afe/AFEmain/1",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/afe/AFEmain/1",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "serial_number",
+											"value": "111111111111111",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}/delete",
+							"request": {
+								"url": "http://localhost:8000/afe/AFEmain/1/delete",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "produkAFE",
+					"description": "",
+					"item": [
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/afe/produkAFE",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUyOTAwNiwiZXhwIjoxNjM2NTMyNjA2LCJuYmYiOjE2MzY1MjkwMDYsImp0aSI6InFnd3V6WnE1dGp5UWE0eTAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UflGCYI6UAridooRnwImBjEBg8-ESryQcvs4HRL29JU",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/afe/produkAFE",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUyOTAwNiwiZXhwIjoxNjM2NTMyNjA2LCJuYmYiOjE2MzY1MjkwMDYsImp0aSI6InFnd3V6WnE1dGp5UWE0eTAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UflGCYI6UAridooRnwImBjEBg8-ESryQcvs4HRL29JU",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/afe/produkAFE/1",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUyOTAwNiwiZXhwIjoxNjM2NTMyNjA2LCJuYmYiOjE2MzY1MjkwMDYsImp0aSI6InFnd3V6WnE1dGp5UWE0eTAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UflGCYI6UAridooRnwImBjEBg8-ESryQcvs4HRL29JU",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/afe/produkAFE/1",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUyOTAwNiwiZXhwIjoxNjM2NTMyNjA2LCJuYmYiOjE2MzY1MjkwMDYsImp0aSI6InFnd3V6WnE1dGp5UWE0eTAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UflGCYI6UAridooRnwImBjEBg8-ESryQcvs4HRL29JU",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "jenis_afe",
+											"value": "TS-107",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "produk_afe",
+											"value": "TS-107",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}/delete",
+							"request": {
+								"url": "http://localhost:8000/afe/produkAFE/1/delete",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUyOTAwNiwiZXhwIjoxNjM2NTMyNjA2LCJuYmYiOjE2MzY1MjkwMDYsImp0aSI6InFnd3V6WnE1dGp5UWE0eTAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UflGCYI6UAridooRnwImBjEBg8-ESryQcvs4HRL29JU",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "kategoriAFE",
+					"description": "",
+					"item": [
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/afe/kategoriAFE",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUyOTAwNiwiZXhwIjoxNjM2NTMyNjA2LCJuYmYiOjE2MzY1MjkwMDYsImp0aSI6InFnd3V6WnE1dGp5UWE0eTAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UflGCYI6UAridooRnwImBjEBg8-ESryQcvs4HRL29JU",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_afe",
+											"value": "MPPDC",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/afe/kategoriAFE",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUyOTAwNiwiZXhwIjoxNjM2NTMyNjA2LCJuYmYiOjE2MzY1MjkwMDYsImp0aSI6InFnd3V6WnE1dGp5UWE0eTAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UflGCYI6UAridooRnwImBjEBg8-ESryQcvs4HRL29JU",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/afe/kategoriAFE/1",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUyOTAwNiwiZXhwIjoxNjM2NTMyNjA2LCJuYmYiOjE2MzY1MjkwMDYsImp0aSI6InFnd3V6WnE1dGp5UWE0eTAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UflGCYI6UAridooRnwImBjEBg8-ESryQcvs4HRL29JU",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/afe/kategoriAFE/1",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUyOTAwNiwiZXhwIjoxNjM2NTMyNjA2LCJuYmYiOjE2MzY1MjkwMDYsImp0aSI6InFnd3V6WnE1dGp5UWE0eTAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UflGCYI6UAridooRnwImBjEBg8-ESryQcvs4HRL29JU",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}/delete",
+							"request": {
+								"url": "http://localhost:8000/afe/kategoriAFE/1/delete",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUyOTAwNiwiZXhwIjoxNjM2NTMyNjA2LCJuYmYiOjE2MzY1MjkwMDYsImp0aSI6InFnd3V6WnE1dGp5UWE0eTAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UflGCYI6UAridooRnwImBjEBg8-ESryQcvs4HRL29JU",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Status",
+					"description": "",
+					"item": [
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/afe/status",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUyOTAwNiwiZXhwIjoxNjM2NTMyNjA2LCJuYmYiOjE2MzY1MjkwMDYsImp0aSI6InFnd3V6WnE1dGp5UWE0eTAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UflGCYI6UAridooRnwImBjEBg8-ESryQcvs4HRL29JU",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_afe",
+											"value": "MPPDC",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/afe/status",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUyOTAwNiwiZXhwIjoxNjM2NTMyNjA2LCJuYmYiOjE2MzY1MjkwMDYsImp0aSI6InFnd3V6WnE1dGp5UWE0eTAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UflGCYI6UAridooRnwImBjEBg8-ESryQcvs4HRL29JU",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/afe/status/1",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUyOTAwNiwiZXhwIjoxNjM2NTMyNjA2LCJuYmYiOjE2MzY1MjkwMDYsImp0aSI6InFnd3V6WnE1dGp5UWE0eTAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UflGCYI6UAridooRnwImBjEBg8-ESryQcvs4HRL29JU",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/afe/status/1",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUyOTAwNiwiZXhwIjoxNjM2NTMyNjA2LCJuYmYiOjE2MzY1MjkwMDYsImp0aSI6InFnd3V6WnE1dGp5UWE0eTAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UflGCYI6UAridooRnwImBjEBg8-ESryQcvs4HRL29JU",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}/delete",
+							"request": {
+								"url": "http://localhost:8000/afe/status/1/delete",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUyOTAwNiwiZXhwIjoxNjM2NTMyNjA2LCJuYmYiOjE2MzY1MjkwMDYsImp0aSI6InFnd3V6WnE1dGp5UWE0eTAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UflGCYI6UAridooRnwImBjEBg8-ESryQcvs4HRL29JU",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "AFEStatus",
+					"description": "",
+					"item": [
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/afe/statusAFE",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUyOTAwNiwiZXhwIjoxNjM2NTMyNjA2LCJuYmYiOjE2MzY1MjkwMDYsImp0aSI6InFnd3V6WnE1dGp5UWE0eTAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UflGCYI6UAridooRnwImBjEBg8-ESryQcvs4HRL29JU",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_afe",
+											"value": "MPPDC",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/afe/statusAFE",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUyOTAwNiwiZXhwIjoxNjM2NTMyNjA2LCJuYmYiOjE2MzY1MjkwMDYsImp0aSI6InFnd3V6WnE1dGp5UWE0eTAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UflGCYI6UAridooRnwImBjEBg8-ESryQcvs4HRL29JU",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/afe/statusAFE/1",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUyOTAwNiwiZXhwIjoxNjM2NTMyNjA2LCJuYmYiOjE2MzY1MjkwMDYsImp0aSI6InFnd3V6WnE1dGp5UWE0eTAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UflGCYI6UAridooRnwImBjEBg8-ESryQcvs4HRL29JU",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/afe/statusAFE/1",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUyOTAwNiwiZXhwIjoxNjM2NTMyNjA2LCJuYmYiOjE2MzY1MjkwMDYsImp0aSI6InFnd3V6WnE1dGp5UWE0eTAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UflGCYI6UAridooRnwImBjEBg8-ESryQcvs4HRL29JU",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}/delete",
+							"request": {
+								"url": "http://localhost:8000/afe/statusAFE/1/delete",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNjUyOTAwNiwiZXhwIjoxNjM2NTMyNjA2LCJuYmYiOjE2MzY1MjkwMDYsImp0aSI6InFnd3V6WnE1dGp5UWE0eTAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.UflGCYI6UAridooRnwImBjEBg8-ESryQcvs4HRL29JU",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Outlet",
+			"description": "",
+			"item": [
+				{
+					"name": "outletMain",
+					"description": "",
+					"item": [
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/outlet/outletMain",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/outlet/outletMain",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "wp_main_id",
+											"value": "2",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "jenis_pajak_id",
+											"value": "1",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "status_outlet_id",
+											"value": "1",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "nama_wp",
+											"value": "kok ada nama lagi disini",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "nopd",
+											"value": "nopd",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "alamat_outlet",
+											"value": "alamat_outlet",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "kel_desa",
+											"value": "kel_desa",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "rt",
+											"value": "12",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "rw",
+											"value": "21",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "kode_pos",
+											"value": "121212",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": "9238293892",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "lon",
+											"value": "2983928392",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "outlet_id",
+											"value": "12121211",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/outlet/outletMain/2",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/outlet/outletMain/1",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}/delete",
+							"request": {
+								"url": "http://localhost:8000/outlet/outletMain/1/delete",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "AFEOutlet",
+					"description": "",
+					"item": [
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/outlet/AFEOutlet",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/outlet/AFEOutlet",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "outlet_main_id",
+											"value": "1",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "afe_main_id",
+											"value": "1",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "Ditarik",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/outlet/AFEOutlet/1",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/outlet/AFEOutlet/1",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "outlet_main_id",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}/delete",
+							"request": {
+								"url": "http://localhost:8000/outlet/AFEOutlet/1/delete",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "JanisPajak",
+					"description": "",
+					"item": [
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/outlet/jenisPajak",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/outlet/jenisPajak",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/outlet/jenisPajak/1",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/outlet/jenisPajak/1",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}/delete",
+							"request": {
+								"url": "http://localhost:8000/outlet/jenisPajak/1/delete",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "statusOutlet",
+					"description": "",
+					"item": [
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/outlet/statusOutlet",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/outlet/statusOutlet",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/outlet/statusOutlet/1",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/outlet/statusOutlet/1",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}/delete",
+							"request": {
+								"url": "http://localhost:8000/outlet/statusOutlet/1/delete",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "jenisAmount",
+					"description": "",
+					"item": [
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/outlet/jenisAmount",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/",
+							"request": {
+								"url": "http://localhost:8000/outlet/jenisAmount",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/outlet/jenisAmount/1",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"url": "http://localhost:8000/outlet/jenisAmount/1",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}/delete",
+							"request": {
+								"url": "http://localhost:8000/outlet/jenisAmount/1/delete",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzNzY0NTg3OSwiZXhwIjoxNjM3NjQ5NDc5LCJuYmYiOjE2Mzc2NDU4NzksImp0aSI6ImtGMmxrdVJ1bkNVekg4YVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Sy5q7Y5A3LB--x3Hcqou1cSuEZmaboVOX7S5ZtFbBF0",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "kategori_wp",
+											"value": "Koperasi",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	]
+}

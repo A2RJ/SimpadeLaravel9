@@ -19,7 +19,13 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return Response()->json([
+        'status' => 'success',
+        'message' => 'Welcome to Simpade Lumen API',
+        'data' => [
+            'version' => '1.0.0'
+        ]
+    ], 200);
 });
 
 $router->group(['middleware' => 'jwt', 'prefix' => 'auth'], function ($router) {

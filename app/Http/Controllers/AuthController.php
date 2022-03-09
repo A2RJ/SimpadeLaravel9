@@ -31,7 +31,6 @@ class AuthController extends Controller
 
         if ($validator->fails()) {
             return response()->json([
-                'status' => 'error',
                 'message' => $validator->errors()
             ], Response::HTTP_UNPROCESSABLE_ENTITY);
         } else {
@@ -39,7 +38,6 @@ class AuthController extends Controller
             $wpMain->password = Hash::make($request->password);
             $wpMain->save();
             return response()->json([
-                'status' => 'success',
                 'data' => $wpMain
             ], Response::HTTP_CREATED);
         }
@@ -49,12 +47,11 @@ class AuthController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'email' => 'required|string|email|max:255',
-            'password' => 'required|string|min:6',
+            'password' => 'required|string|min:8',
         ]);
 
         if ($validator->fails()) {
             return response()->json([
-                'status' => 'error',
                 'message' => $validator->errors()
             ], Response::HTTP_UNPROCESSABLE_ENTITY);
         }
@@ -63,7 +60,6 @@ class AuthController extends Controller
 
         if (!$token = JWTAuth::attempt($credentials)) {
             return response()->json([
-                'status' => 'error',
                 'message' => 'invalid credentials'
             ], Response::HTTP_UNAUTHORIZED);
         }
@@ -78,17 +74,24 @@ class AuthController extends Controller
     public function me()
     {
         try {
-            if (!$user = JWTAuth::parseToken()->authenticate()) return response()->json(['user_not_found'], Response::HTTP_NOT_FOUND);
+            if (!$user = JWTAuth::parseToken()->authenticate()) return response()->json([
+                'message' => 'user_not_found'
+            ], Response::HTTP_NOT_FOUND);
         } catch (\Tymon\JWTAuth\Exceptions\TokenExpiredException $e) {
-            return response()->json(['token_expired'], Response::HTTP_UNAUTHORIZED);
+            return response()->json([
+                'message' => 'token_expired'
+            ], Response::HTTP_UNAUTHORIZED);
         } catch (\Tymon\JWTAuth\Exceptions\TokenInvalidException $e) {
-            return response()->json(['token_invalid'], Response::HTTP_UNAUTHORIZED);
+            return response()->json([
+                'message' => 'token_invalid'
+            ], Response::HTTP_UNAUTHORIZED);
         } catch (\Tymon\JWTAuth\Exceptions\JWTException $e) {
-            return response()->json(['token_absent'], Response::HTTP_UNAUTHORIZED);
+            return response()->json([
+                'message' => 'token_absent'
+            ], Response::HTTP_UNAUTHORIZED);
         }
 
         return response()->json([
-            'status' => 'success',
             'data' => $user
         ], Response::HTTP_OK);
     }

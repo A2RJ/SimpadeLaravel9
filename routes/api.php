@@ -1,11 +1,19 @@
 <?php
 
-use App\Http\Controllers\Auth\AuthController;
-use App\Models\User;
-use GuzzleHttp\Middleware;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\AuthController;
+use App\Models\KategoriWP;
+use App\Http\Controllers\WPMainController;
+use App\Http\Controllers\AFEMainController;
+use App\Http\Controllers\AFEOutletController;
+use App\Http\Controllers\JenisAmountController;
+use App\Http\Controllers\JenisPajakController;
+use App\Http\Controllers\KategoriAFEController;
+use App\Http\Controllers\OutletMainController;
+use App\Http\Controllers\ProdukAFEController;
+use App\Http\Controllers\StatusAFEController;
+use App\Http\Controllers\StatusOutletController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,171 +41,104 @@ Route::get('/', function () {
     ]);
 });
 
-Route::group(['prefix' => 'auth'], function () {
-    Route::post('/login', [AuthController::class, 'login'])->name('login');
-    Route::post('/register', [AuthController::class, 'register']);
+Route::controller(AuthController::class)->prefix('auth')->group(function () {
+    Route::post('/login', 'login')->name('login');
+    Route::post('/register', 'register');
+    Route::group(['middleware' => ['auth:sanctum']], function () {
+        Route::get('/me', 'me');
+        Route::get('/logout', 'logout');
+    });
 });
 
-//Protecting Routes
-Route::group(['middleware' => ['auth:sanctum']], function () {
-    Route::get('/profile', function (Request $request) {
-        return auth()->user();
+Route::prefix('wp')->middleware(['auth:sanctum'])->group(function () {
+    Route::controller(WPMainController::class)->prefix('wp')->group(function () {
+        Route::get('/', 'index');
+        Route::get('/{id}', 'show');
+        Route::post('/', 'store');
+        Route::put('/{id}', 'update');
+        Route::get('/{id}/delete', 'destroy');
     });
-
-    Route::post('/users', function (Request $request) {
-        return User::all();
+    Route::controller(KategoriWP::class)->prefix('kategori')->group(function () {
+        Route::get('/', 'index');
+        Route::get('/{id}', 'show');
+        Route::post('/', 'store');
+        Route::put('/{id}', 'update');
+        Route::get('/{id}/delete', 'destroy');
     });
-
-    // API route for logout user
-    Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
 });
 
+Route::prefix('afe')->middleware(['auth:sanctum'])->group(function () {
+    Route::controller(AFEMainController::class)->prefix('afe')->group(function () {
+        Route::get('/', 'index');
+        Route::get('/{id}', 'show');
+        Route::post('/', 'store');
+        Route::put('/{id}', 'update');
+        Route::get('/{id}/delete', 'destroy');
+    });
+    Route::controller(ProdukAFEController::class)->prefix('produk')->group(function () {
+        Route::get('/', 'index');
+        Route::get('/{id}', 'show');
+        Route::post('/', 'store');
+        Route::put('/{id}', 'update');
+        Route::get('/{id}/delete', 'destroy');
+    });
+    Route::controller(KategoriAFEController::class)->prefix('kategori')->group(function () {
+        Route::get('/', 'index');
+        Route::get('/{id}', 'show');
+        Route::post('/', 'store');
+        Route::put('/{id}', 'update');
+        Route::get('/{id}/delete', 'destroy');
+    });
+    Route::controller(StatusAFEController::class)->prefix('status')->group(function () {
+        Route::get('/', 'index');
+        Route::get('/{id}', 'show');
+        Route::post('/', 'store');
+        Route::put('/{id}', 'update');
+        Route::get('/{id}/delete', 'destroy');
+    });
+    Route::controller(StatusAFEController::class)->prefix('afestatus')->group(function () {
+        Route::get('/', 'index');
+        Route::get('/{id}', 'show');
+        Route::post('/', 'store');
+        Route::put('/{id}', 'update');
+        Route::get('/{id}/delete', 'destroy');
+    });
+});
 
-// $router->group(['middleware' => 'jwt', 'prefix' => 'auth'], function ($router) {
-//     $router->post('me', 'AuthController@me');
-//     $router->post('logout', 'AuthController@logout');
-// });
-
-// $router->group(['prefix' => 'auth'], function () use ($router) {
-//     $router->post('register', 'AuthController@register');
-//     $router->post('login', 'AuthController@login');
-// });
-
-// $router->group(['prefix' => 'wp'], function () use ($router) {
-//     $router->group(['prefix' => 'wp'], function () use ($router) {
-//         $router->get('/', 'WPMainController@index');
-//         $router->get('/count', 'WPMainController@count');
-//         $router->get('/countByDaerah', 'WPMainController@countByDaerah');
-//         $router->get('/getAllWpOutlet', 'WPMainController@getAllWpOutlet');
-//         $router->get('/{id}', 'WPMainController@show');
-//         $router->get('/getWpByKategori/{id}', 'WPMainController@getWpByKategori');
-//         $router->get('/getWpByOutlet/{id}', 'WPMainController@getWpByOutlet');
-//         $router->get('/getWpByAfe/{id}', 'WPMainController@getWpByAfe');
-//         $router->get('/getWpByKodePemda/{id}', 'WPMainController@getWpByKodePemda');
-//         $router->get('/countWpByDaerahId/{id}', 'WPMainController@countWpByDaerahId');
-//         $router->get('/getWpOutletByIdWp/{id}', 'WPMainController@getWpOutletByIdWp');
-//         $router->get('/getWpOutletByKategori/{id}', 'WPMainController@getWpOutletByKategori');
-//         $router->get('/getWpOutletByAfe/{id}', 'WPMainController@getWpOutletByAfe');
-//         $router->get('/getWpOutletByKodePemda/{id}', 'WPMainController@getWpOutletByKodePemda');
-//         $router->get('/{id}/delete', 'WPMainController@destroy');
-//         $router->post('/', 'WPMainController@store');
-//         $router->put('/{id}', 'WPMainController@update');
-//         $router->delete('/{id}', 'WPMainController@destroy');
-//     });
-
-//     $router->group(['prefix' => 'kategori'], function () use ($router) {
-//         $router->get('/', 'KategoriWPController@index');
-//         $router->get('/{id}', 'KategoriWPController@show');
-//         $router->get('/{id}/delete', 'KategoriWPController@destroy');
-//         $router->post('/', 'KategoriWPController@store');
-//         $router->put('/{id}', 'KategoriWPController@update');
-//         $router->delete('/{id}', 'KategoriWPController@destroy');
-//     });
-// });
-
-// $router->group(['prefix' => 'afe'], function () use ($router) {
-//     $router->group(['prefix' => 'AFEmain'], function () use ($router) {
-//         $router->get('/', 'AFEMainController@index');
-//         $router->get('/{id}', 'AFEMainController@show');
-//         $router->get('/{id}/delete', 'AFEMainController@destroy');
-//         $router->post('/', 'AFEMainController@store');
-//         $router->put('/{id}', 'AFEMainController@update');
-//         $router->delete('/{id}', 'AFEMainController@destroy');
-//     });
-
-//     $router->group(['prefix' => 'produkAFE'], function () use ($router) {
-//         $router->get('/', 'ProdukAFEController@index');
-//         $router->get('/{id}', 'ProdukAFEController@show');
-//         $router->get('/{id}/delete', 'ProdukAFEController@destroy');
-//         $router->post('/', 'ProdukAFEController@store');
-//         $router->put('/{id}', 'ProdukAFEController@update');
-//         $router->delete('/{id}', 'ProdukAFEController@destroy');
-//     });
-
-//     $router->group(['prefix' => 'kategoriAFE'], function () use ($router) {
-//         $router->get('/', 'KategoriAFEController@index');
-//         $router->get('/{id}', 'KategoriAFEController@show');
-//         $router->get('/{id}/delete', 'KategoriAFEController@destroy');
-//         $router->post('/', 'KategoriAFEController@store');
-//         $router->put('/{id}', 'KategoriAFEController@update');
-//         $router->delete('/{id}', 'KategoriAFEController@destroy');
-//     });
-
-//     $router->group(['prefix' => 'status'], function () use ($router) {
-//         $router->get('/', 'StatusController@index');
-//         $router->get('/{id}', 'StatusController@show');
-//         $router->get('/{id}/delete', 'StatusController@destroy');
-//         $router->post('/', 'StatusController@store');
-//         $router->put('/{id}', 'StatusController@update');
-//         $router->delete('/{id}', 'StatusController@destroy');
-//     });
-
-//     $router->group(['prefix' => 'statusAFE'], function () use ($router) {
-//         $router->get('/', 'StatusAFEController@index');
-//         $router->get('/{id}', 'StatusAFEController@show');
-//         $router->get('/{id}/delete', 'StatusAFEController@destroy');
-//         $router->post('/', 'StatusAFEController@store');
-//         $router->put('/{id}', 'StatusAFEController@update');
-//         $router->delete('/{id}', 'StatusAFEController@destroy');
-//     });
-// });
-
-// $router->group(['prefix' => 'outlet'], function () use ($router) {
-//     $router->group(['prefix' => 'outletMain'], function () use ($router) {
-//         $router->get('/', 'OutletMainController@index');
-//         $router->get('/count', 'OutletMainController@count');
-//         $router->get('/countAfe', 'OutletMainController@countAfe');
-//         $router->get('/getLangLotOutlet', 'OutletMainController@getLangLotOutlet');
-//         $router->get('/{id}', 'OutletMainController@show');
-//         $router->get('/getLangLotOutletById/{id}', 'OutletMainController@getLangLotOutletById');
-//         $router->get('/getOutletByWpMain/{id}', 'OutletMainController@getOutletByWpMain');
-//         $router->get('/countOutletByWp/{id}', 'OutletMainController@countOutletByWp');
-//         $router->get('/getOutletByKodePemda/{id}', 'OutletMainController@getOutletByKodePemda');
-//         $router->get('/countOutletByKodePemda/{id}', 'OutletMainController@countOutletByKodePemda');
-//         $router->get('/getOutletByJenisPajak/{id}', 'OutletMainController@getOutletByJenisPajak');
-//         $router->get('/countOutletByJenisPajak/{id}', 'OutletMainController@countOutletByJenisPajak');
-//         $router->get('/getOutletByStatus/{id}', 'OutletMainController@getOutletByStatus');
-//         $router->get('/countOutletByStatus/{id}', 'OutletMainController@countOutletByStatus');
-//         $router->get('/{id}/delete', 'OutletMainController@destroy');
-//         $router->post('/', 'OutletMainController@store');
-//         $router->put('/{id}', 'OutletMainController@update');
-//         $router->delete('/{id}', 'OutletMainController@destroy');
-//     });
-
-//     $router->group(['prefix' => 'jenisPajak'], function () use ($router) {
-//         $router->get('/', 'JenisPajakController@index');
-//         $router->get('/{id}', 'JenisPajakController@show');
-//         $router->get('/{id}/delete', 'JenisPajakController@destroy');
-//         $router->post('/', 'JenisPajakController@store');
-//         $router->put('/{id}', 'JenisPajakController@update');
-//         $router->delete('/{id}', 'JenisPajakController@destroy');
-//     });
-
-//     $router->group(['prefix' => 'statusOutlet'], function () use ($router) {
-//         $router->get('/', 'StatusOutletController@index');
-//         $router->get('/{id}', 'StatusOutletController@show');
-//         $router->get('/{id}/delete', 'StatusOutletController@destroy');
-//         $router->post('/', 'StatusOutletController@store');
-//         $router->put('/{id}', 'StatusOutletController@update');
-//         $router->delete('/{id}', 'StatusOutletController@destroy');
-//     });
-
-//     $router->group(['prefix' => 'AFEOutlet'], function () use ($router) {
-//         $router->get('/', 'AFEOutletController@index');
-//         $router->get('/{id}', 'AFEOutletController@show');
-//         $router->get('/getOutletMainByAFEOutletId/{id}', 'AFEOutletController@getOutletMainByAFEOutletId');
-//         $router->get('/{id}/delete', 'AFEOutletController@destroy');
-//         $router->post('/', 'AFEOutletController@store');
-//         $router->put('/{id}', 'AFEOutletController@update');
-//         $router->delete('/{id}', 'AFEOutletController@destroy');
-//     });
-
-//     $router->group(['prefix' => 'jenisAmount'], function () use ($router) {
-//         $router->get('/', 'JenisAmountController@index');
-//         $router->get('/{id}', 'JenisAmountController@show');
-//         $router->get('/{id}/delete', 'JenisAmountController@destroy');
-//         $router->post('/', 'JenisAmountController@store');
-//         $router->put('/{id}', 'JenisAmountController@update');
-//         $router->delete('/{id}', 'JenisAmountController@destroy');
-//     });
-// });
+Route::prefix('outlet')->middleware(['auth:sanctum'])->group(function () {
+    Route::controller(OutletMainController::class)->prefix('outlet')->group(function () {
+        Route::get('/', 'index');
+        Route::get('/{id}', 'show');
+        Route::post('/', 'store');
+        Route::put('/{id}', 'update');
+        Route::get('/{id}/delete', 'destroy');
+    });
+    Route::controller(JenisPajakController::class)->prefix('jenispajak')->group(function () {
+        Route::get('/', 'index');
+        Route::get('/{id}', 'show');
+        Route::post('/', 'store');
+        Route::put('/{id}', 'update');
+        Route::get('/{id}/delete', 'destroy');
+    });
+    Route::controller(StatusOutletController::class)->prefix('status')->group(function () {
+        Route::get('/', 'index');
+        Route::get('/{id}', 'show');
+        Route::post('/', 'store');
+        Route::put('/{id}', 'update');
+        Route::get('/{id}/delete', 'destroy');
+    });
+    Route::controller(AFEOutletController::class)->prefix('afe')->group(function () {
+        Route::get('/', 'index');
+        Route::get('/{id}', 'show');
+        Route::post('/', 'store');
+        Route::put('/{id}', 'update');
+        Route::get('/{id}/delete', 'destroy');
+    });
+    Route::controller(JenisAmountController::class)->prefix('jenisamount')->group(function () {
+        Route::get('/', 'index');
+        Route::get('/{id}', 'show');
+        Route::post('/', 'store');
+        Route::put('/{id}', 'update');
+        Route::get('/{id}/delete', 'destroy');
+    });
+});

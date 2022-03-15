@@ -21,10 +21,7 @@ class AuthController extends Controller
 
         if ($validate->fails()) {
             $respon = [
-                'status' => 'error',
-                'msg' => 'Validator error',
-                'errors' => $validate->errors(),
-                'content' => null,
+                'message' => $validate->errors()
             ];
             return response()->json($respon, 200);
         } else {
@@ -32,10 +29,7 @@ class AuthController extends Controller
             $credentials = Arr::add($credentials, 'status', 'aktif');
             if (!Auth::attempt($credentials)) {
                 $respon = [
-                    'status' => 'error',
-                    'msg' => 'Unathorized',
-                    'errors' => null,
-                    'content' => null,
+                    'message' => 'Unathorized, credentials not match'
                 ];
                 return response()->json($respon, 401);
             }
@@ -47,10 +41,9 @@ class AuthController extends Controller
 
             $tokenResult = $user->createToken('token-auth')->plainTextToken;
             $respon = [
-                'status' => 'success',
-                'msg' => 'Login successfully',
+                'message' => 'Login successfully',
                 'access_token' => $tokenResult,
-                'token_type' => 'Bearer',
+                'type' => 'Bearer',
             ];
             return response()->json($respon, 200);
         }
@@ -70,7 +63,7 @@ class AuthController extends Controller
 
         $respon = [
             'user' => $user,
-            'msg' => $user->currentAccessToken()->delete() ? 'Logout successfully' : 'Logout failed',
+            'message' => $user->currentAccessToken()->delete() ? 'Logout successfully' : 'Logout failed',
         ];
 
         return response()->json($respon, 200);
@@ -82,7 +75,7 @@ class AuthController extends Controller
 
         $respon = [
             'user' => $user,
-            'msg' => $user->tokens()->delete() ? 'Logout successfully' : 'Logout failed',
+            'message' => $user->tokens()->delete() ? 'Logout successfully' : 'Logout failed',
         ];
 
         return response()->json($respon, 200);
